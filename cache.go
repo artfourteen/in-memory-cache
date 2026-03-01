@@ -22,6 +22,6 @@ func (c *Cache) Delete(key string) {
 	delete(c.memory, key)
 }
 
-func New() Cache {
-	return Cache{memory: make(map[string]interface{})}
+func New() *Cache {
+	return &Cache{memory: make(map[string]interface{})}
 }
